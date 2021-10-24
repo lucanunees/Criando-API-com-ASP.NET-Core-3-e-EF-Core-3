@@ -8,13 +8,13 @@ using testeef.Models;
 namespace testeef.Controllers
 {
     [ApiController]
-    [Route("V1/Categories")]
+    [Route("v1/Categories")]
 
     public class CategoryController : ControllerBase
     {
         [HttpGet]
         [Route("")]
-
+  
         public async Task<ActionResult<List<Category>>> Get([FromServices] DataContext context)
         {
             var categories = await context.Categories.ToListAsync();
